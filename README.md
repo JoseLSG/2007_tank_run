@@ -1,15 +1,17 @@
 \* University project, rushed code. First try at 3D game graphics programming.
 
-\** Its better to read teh COMP 471 FALL 2007 TERM PROJECT.doc file wich includes screenshots.
+\** Its better to read the COMP 471 FALL 2007 TERM PROJECT.doc file wich includes screenshots.
 
 COMP 471 - FALL 2007 TERM PROJECT - TANK RUN
 ============================================
 
 Group 4
-- JOSE LUIS SALDIVAR
-- NHUT THAI LE
-- YI-CHING LU 
-- ANH THUC NGO
+- JOSE LUIS SALDIVAR (Collision detection, Ballistics) 
+- NHUT THAI LE (Tank Movemenet over Objects)
+- YI-CHING LU (Terrain and Landscape)
+- ANH THUC NGO (Explosion Effects)
+
+\** each member implemented their own tank (total of 4 tanks).
 
 
 1. Introduction
