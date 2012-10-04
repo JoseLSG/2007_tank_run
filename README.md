@@ -2,10 +2,10 @@ COMP 471 - FALL 2007 TERM PROJECT - TANK RUN
 ============================================
 
 Group 4
-JOSE LUIS SALDIVAR
-NHUT THAI LE
-YI-CHING LU 
-ANH THUC NGO
+- JOSE LUIS SALDIVAR
+- NHUT THAI LE
+- YI-CHING LU 
+- ANH THUC NGO
 
 
 1. Introduction
@@ -180,10 +180,11 @@ Note: The main file is Tank_Game.cpp .
 
 
 This game is implemented by:
-	NHUT THAI LE  
-	JOSE LUIS SALDIVAR      	                                        
-	NGO ANH THUC
-	YI-CHING LU 
+- NHUT THAI LE  
+- JOSE LUIS SALDIVAR      	                                        
+- NGO ANH THUC
+- YI-CHING LU 
+
 	Ressources:  
 	http://www.videotutorialsrock.com/                 
 	http://nehe.gamedev.net/                                   
