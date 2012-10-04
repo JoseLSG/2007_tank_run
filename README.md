@@ -38,14 +38,19 @@ We are trying to find a simple way to mimic the movement of the tank over a fixe
 1.	Angles of the hill with respect to the flat ground: hill angle when the tank goes up and when the tank goes down. For simplicity the angle of the up hill and down hill is set to be the same.  In our implementation the variable hillAngle represents this angle.
 2.	The length of the tank body: the tank will not be translated along the y-axis until it is completely on the edge of the hill.
 3.	Top and bottom position of the hill: when the tank moves around the world, it must know whether it hit the base of the hill or the top of the hill. To do so, we check if the tank collide with the spheres represents the top and the bottom of the hill.
+
 The arrangement of the 2 spheres for the hill is shown as below:
+
+ - <bold>View image from COMP 471 FALL 2007 TERM PROJECT.doc file</bold>
  
 
 From the position of the 2 spheres of the tank and the 2 spheres of the hill we can tell whether the tank is outside, on the edges, or on top of the hill.
+
 The screenshot below shows 2 spheres of the tank:
 Outside sphere: black
 Inside sphere: yellow
- 
+
+ - <bold>View image from COMP 471 FALL 2007 TERM PROJECT.doc file</bold>
 
 Moving the tank over the hill is done by rotating the tank according to the hill angle, translating the tank along x, y, z axis properly. The angle of the tank with respect to the ground while moving up/down hill is represented by beta in our program.
 When the tank is moving up the hill but no completely on the edge of the hill, beta is:
@@ -70,18 +75,21 @@ T = time.
 
 Trigonometry used:
 Y = sin(angle_v) * Vo,
- r = cos(angle_v) * Vo,
+r = cos(angle_v) * Vo,
 X = r * cos(angle_h),
 Z = r * sin(angle_h)
 
+ - View image from COMP 471 FALL 2007 TERM PROJECT.doc file
    
 Each part represents one of the 3 dimensions (x,y,z coordinates) needed to determine the position of the projectile bullet at any interval time. In our algorithm, our main goal was to determine the final position of the bullet once it hits a target (based on our collision detection algorithm) or it reaches ground level. 
 
 Object Hit
- 
+
+ - <bold>View image from COMP 471 FALL 2007 TERM PROJECT.doc file</bold>
 
 Ground Hit
  
+ - <bold>View image from COMP 471 FALL 2007 TERM PROJECT.doc file</bold>
 
 After we understand the equation, we have to implement it into our code. As the tank moves and changes the angle of the barrel, the variables of the equation also have to change. The effect of the variable change must represent an approximation to the real world shooting. 
 
@@ -91,7 +99,7 @@ We only considered gravity as the variable most important in calculating a reali
 An implementation of collision detection is simply based on the concept of 2 spheres moving in space. If the 2 spheres collide, the distance between their 2 centers is less than the sum of their respective radius. To implement this concept, we calculate the distance between the center of the tank and the center of the static object whenever the position of the tank is changed. The distance is then compared to the sum of the imaginary radius of the tank and the static object to determine if there is a collision. If there is a collision, the previous position of the tank is used instead of the new one; thus the tank stays at the same position, it can not advance. We have an array of static objects, each has 4 parameters: center coordinate x, y, z and the last one is the imaginary radius.
 All the objects in this array are checked for collision every time the tank move. In our project, there is a small gap between where the collision spheres and the objects inside the sphere.
 
- 
+  - <bold>View image from COMP 471 FALL 2007 TERM PROJECT.doc file</bold>
 
 Instead of using sphere collision, we could have used a rectangle shape that would fit more properly for some objects but it would require more calculations with ray to plane equations to find an intersecting points. This method could be used in conjunctions with sphere collision to create a more realistic level of detail between objects. Another method could be use just simple increase the number of spheres and reduce the size of their radius. It would require more work to maintain variable updated and checked but the result would be a more realistic collision detection system. Our team felt our implementation would satisfy our need for collision. We would spend more time on other aspects of the project yet use our collision implementation as an important base for other functionality aspects of this game.
 
@@ -107,7 +115,8 @@ Light effect of the explosion is the same idea as the smoke. It consists of alph
 
 2.5-Creating terrain and landscape
 The terrain is made of a mesh of triangles (triangle strip). The variation in height of the terrain is generated using a height map. We make a grey-scale bitmap file by PhotoShop and use a function to read each pixel on the height map and generate a number according to the color of each pixel (the whither the pixel the larger the number). Another function will read this number and convert into a vector representing the position of the vertex of the triangle it must be in our 3D world. The normal vector at each vertex will also be calculated.
-     
+ 
+ - <bold>View image from COMP 471 FALL 2007 TERM PROJECT.doc file</bold> 
 
 3. Result
 ---------
