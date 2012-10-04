@@ -1,6 +1,6 @@
 \* University project, rushed code. First try at 3D game graphics programming.
 
-\** Its better to read the COMP 471 FALL 2007 TERM PROJECT.doc file wich includes screenshots.
+\** Its better to read the COMP 471 FALL 2007 TERM PROJECT.doc file which includes screenshots.
 
 COMP 471 - FALL 2007 TERM PROJECT - TANK RUN
 ============================================
